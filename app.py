@@ -20,7 +20,6 @@ def get_dominant_color():
         color_count = Counter(pixel_data)
         
         dominant_color = color_count.most_common(1)[0][0]
-        print(dominant_color)
         return jsonify({"dominant_color": dominant_color})
     else:
         return jsonify({"error": "Image not found or couldn't be fetched."}), 404
